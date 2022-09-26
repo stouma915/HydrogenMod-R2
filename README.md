@@ -1,2 +1,2 @@
 # HydrogenMod-R2
-Add hydrogen to Minecraft.
+Add hydrogen to Minecraft
