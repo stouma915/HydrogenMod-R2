@@ -9,5 +9,4 @@ object HydrogenMod {
 }
 
 @Mod(HydrogenMod.ModId)
-final class HydrogenMod {
-}
+final class HydrogenMod {}
