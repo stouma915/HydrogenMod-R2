@@ -1,4 +1,4 @@
-package net.st915.hydrogenmod.item
+package net.st915.hydrogenmod.item.generic
 
 import net.minecraft.item.Item
 
