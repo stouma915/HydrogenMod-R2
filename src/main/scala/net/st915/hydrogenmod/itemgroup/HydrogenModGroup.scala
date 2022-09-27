@@ -10,7 +10,8 @@ object HydrogenModGroup {
 
   lazy val items: List[Item] = List(
     HydrogenItem.instance,
-    OxygenItem.instance
+    OxygenItem.instance,
+    HydrogenPeroxideItem.instance
   )
 
   val instance: ItemGroup = new HydrogenModGroup

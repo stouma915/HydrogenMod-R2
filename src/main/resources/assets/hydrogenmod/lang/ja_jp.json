@@ -1,5 +1,6 @@
 {
   "itemGroup.hydrogenmod": "HydrogenMod",
   "item.hydrogenmod.hydrogen": "水素",
-  "item.hydrogenmod.oxygen": "酸素"
+  "item.hydrogenmod.oxygen": "酸素",
+  "item.hydrogenmod.hydrogen_peroxide": "過酸化水素"
 }
