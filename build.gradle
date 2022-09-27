@@ -86,8 +86,8 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:1.16.5-36.2.39"
 
-    includeInJar "org.scala-lang:scala3-library_3:3.2.0"
-    includeInJar "org.typelevel:cats-effect_3:3.3.14"
+    includeInJar "org.scala-lang:scala-library:2.13.9"
+    includeInJar "org.typelevel:cats-effect_2.13:3.3.14"
 }
 
 processResources {
