@@ -4,12 +4,13 @@ import net.minecraft.item.{Item, ItemGroup, ItemStack}
 import net.minecraft.util.NonNullList
 import net.st915.hydrogenmod.HydrogenMod
 import net.st915.hydrogenmod.implicits._
-import net.st915.hydrogenmod.item.HydrogenItem
+import net.st915.hydrogenmod.item._
 
 object HydrogenModGroup {
 
   lazy val items: List[Item] = List(
-    HydrogenItem.instance
+    HydrogenItem.instance,
+    OxygenItem.instance
   )
 
   val instance: ItemGroup = new HydrogenModGroup
