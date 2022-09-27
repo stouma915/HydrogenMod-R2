@@ -1,0 +1,105 @@
+plugins {
+    id "net.minecraftforge.gradle" version "5.1.+"
+}
+
+apply plugin: "scala"
+
+group = "net.st915"
+version = "R2-1.0.0"
+
+java {
+    archivesBaseName = "hydrogenmod"
+    toolchain.languageVersion = JavaLanguageVersion.of(8)
+}
+
+minecraft {
+    mappings channel: "snapshot", version: "20210309-1.16.5"
+
+    runs {
+        client {
+            workingDirectory project.file("run")
+
+            property "forge.logging.markers", "REGISTRIES"
+            property "forge.logging.console.level", "debug"
+
+            mods {
+                hydrogenmod {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file("run")
+
+            property "forge.logging.markers", "REGISTRIES"
+            property "forge.logging.console.level", "debug"
+
+            mods {
+                hydrogenmod {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file("run")
+
+            property "forge.logging.markers", "REGISTRIES"
+            property "forge.logging.console.level", "debug"
+
+            args "--mod", "hydrogenmod", "--all", "--output", file("src/generated/resources/"), "--existing", file("src/main/resources/")
+
+            mods {
+                hydrogenmod {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+sourceSets.main {
+    scala {
+        srcDirs = ["src/main/scala"]
+    }
+
+    java {
+        srcDirs = []
+    }
+
+    resources {
+        srcDir "src/generated/resources"
+    }
+}
+
+configurations {
+    includeInJar
+
+    implementation.extendsFrom(includeInJar)
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:1.16.5-36.2.39"
+
+    includeInJar "org.scala-lang:scala3-library_3:3.2.0"
+    includeInJar "org.typelevel:cats-effect_3:3.3.14"
+}
+
+processResources {
+    configurations.includeInJar.canBeResolved(true)
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from configurations.includeInJar.collect {
+        it.isDirectory() ? it : zipTree(it)
+    }
+}
+
+jar {
+    archiveName("hydrogenmod-r2-${project.version}.jar")
+}
