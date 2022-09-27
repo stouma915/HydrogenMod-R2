@@ -1,16 +1,12 @@
 package net.st915.hydrogenmod.item
 
 import net.minecraft.item.Item
-import net.st915.hydrogenmod.itemgroup.HydrogenModGroup
+import net.st915.hydrogenmod.implicits.defaultItemProperties
 
 object HydrogenItem {
-
-  val properties: Item.Properties =
-    new Item.Properties()
-      .group(HydrogenModGroup.instance)
 
   val instance: Item = new HydrogenItem
 
 }
 
-final class HydrogenItem extends Item(HydrogenItem.properties)
+final class HydrogenItem extends HydrogenModItem
