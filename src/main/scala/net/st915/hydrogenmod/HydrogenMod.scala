@@ -27,8 +27,8 @@ final class HydrogenMod {
       "hydrogen" -> HydrogenItem.instance,
       "oxygen" -> OxygenItem.instance,
       "hydrogen_peroxide" -> HydrogenPeroxideItem.instance
-    ).foreach { case (name: String, item: Item) =>
-      HydrogenModRegistries.ItemRegistry.register(name, () => item)
+    ).foreach { case (id: String, item: Item) =>
+      HydrogenModRegistries.ItemRegistry.register(id, () => item)
     }
   }
 
