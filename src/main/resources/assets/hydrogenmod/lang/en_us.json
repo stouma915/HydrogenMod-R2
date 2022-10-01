@@ -1,5 +1,5 @@
 {
-  "itemGroup.hydrogenmod": "HydrogenMod",
+  "itemGroup.hydrogenmod_general": "HydrogenMod",
   "item.hydrogenmod.hydrogen": "Hydrogen",
   "item.hydrogenmod.oxygen": "Oxygen",
   "item.hydrogenmod.hydrogen_peroxide": "Hydrogen Peroxide"
