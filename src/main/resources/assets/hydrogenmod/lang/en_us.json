@@ -2,5 +2,8 @@
   "itemGroup.hydrogenmod_general": "HydrogenMod",
   "item.hydrogenmod.hydrogen": "Hydrogen",
   "item.hydrogenmod.oxygen": "Oxygen",
-  "item.hydrogenmod.hydrogen_peroxide": "Hydrogen Peroxide"
+  "item.hydrogenmod.hydrogen_peroxide": "Hydrogen Peroxide",
+  "item.minecraft.potion.effect.hydrogen_water": "Hydrogen Water",
+  "item.minecraft.splash_potion.effect.hydrogen_water": "Splash Hydrogen Water",
+  "item.minecraft.lingering_potion.effect.hydrogen_water": "Lingering Hydrogen Water"
 }
